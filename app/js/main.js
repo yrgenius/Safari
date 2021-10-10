@@ -1,6 +1,6 @@
 $(function() {
 
-    $('.about__link').magnificPopup({
+    $('.about__link, .country__link').magnificPopup({
 		disableOn: 700,
 		type: 'iframe',
 		mainClass: 'mfp-fade',
