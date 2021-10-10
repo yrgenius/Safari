@@ -361,4 +361,35 @@
             background-color: #c4c4c4;
         }
     }
+
+    &__slider {
+        position: relative;
+    }
+
+    .slick-prev,
+    .slick-next {
+        position: absolute;
+        right: 0;
+        top: -75px;
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: rotate(360deg);
+        }
+    }
+
+    .slick-prev {
+        right: 60px;
+    }
+
+    &__inner {
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
 }
