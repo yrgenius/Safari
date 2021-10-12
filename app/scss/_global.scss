@@ -14,9 +14,9 @@ body {
     margin: 0 auto;
 }
 
-.logo {
-    padding: 16px 0 15px;
-}
+// .logo {
+//     padding: 16px 0 15px;
+// }
 
 .title {
     font-size: 36px;
@@ -29,4 +29,65 @@ body {
     background: #886239;
     border-radius: 22px;
     color: $wt;
+}
+
+.burger {
+    width: 50px;
+    height: 50px;
+    display: none;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    top: 20px;
+    right: 10px;
+    z-index: 10;
+
+    &__link {
+        display: block;
+        position: relative;
+        height: 5px;
+        width: 100%;
+        background-color: #ccc;
+        transition: background-color 0.3s, transform 0.3s;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            height: 5px;
+            width: 100%;
+            left: 0;
+            background-color: #ccc;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        &::before {
+            top: -15px;
+        }
+        &::after {
+            top: 15px;
+        }
+    }
+
+    &:hover &__link,
+    &:hover &__link::after,
+    &:hover &__link::before {
+        background-color: #aaa;
+    }
+
+    .active &__link {
+        transform: rotate(45deg);
+
+        &::before,
+        &::after {
+            top: 0;
+        }
+    }
+
+    .active &__link::before {
+        transform: rotate(90deg);
+    }
+    .active &__link::after {
+        transform: rotate(-90deg);
+    }
 }

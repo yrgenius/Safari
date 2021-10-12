@@ -1,0 +1,518 @@
+@media (max-width: 1200px) {
+    .gallery {
+        &__top {
+            justify-content: space-evenly;
+        }
+
+        &__more {
+            margin-right: 0;
+        }
+
+        &__list {
+            justify-content: space-evenly;
+        }
+    }
+}
+
+@media (max-width: 1120px) {
+    .country,
+    .offer,
+    .map,
+    .about,
+    .gallery,
+    .premium,
+    .booking {
+        .container {
+            padding: 90px 15px 70px;
+        }
+    }
+
+    .direction {
+        &__list {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            text-align: center;
+        }
+
+        &__item {
+            justify-self: center;
+            &::before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    .offer {
+        &__list {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        &__item {
+            &:nth-child(3) {
+                grid-column-start: 2;
+                grid-column-end: 4;
+                grid-row-start: 1;
+                grid-row-end: 3;
+            }
+
+            &:nth-child(6) {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 3;
+                grid-row-end: 5;
+            }
+        }
+    }
+
+    .map {
+        iframe {
+            width: 100%;
+        }
+    }
+
+    .about {
+        .container {
+            padding: 0 15px 70px;
+        }
+
+        &__video {
+            width: 50%;
+        }
+    }
+
+    .premium {
+        &__title {
+            margin-bottom: 30px;
+        }
+
+        &__list {
+            column-gap: 15px;
+            margin-bottom: 50px;
+        }
+    }
+
+    .booking {
+        &__input {
+            width: 32%;
+        }
+    }
+
+    .footer {
+        .container {
+            padding: 60px 30px 60px;
+        }
+
+        .logo {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .header__title {
+        font-size: 70px;
+    }
+
+    .country,
+    .offer,
+    .map,
+    .about,
+    .gallery,
+    .premium,
+    .booking {
+        .container {
+            padding: 70px 15px 50px;
+        }
+    }
+
+    .country {
+        &__list {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+    }
+
+    .about {
+        .container {
+            padding: 0 15px 70px;
+        }
+
+        &__text {
+            max-width: 400px;
+        }
+    }
+
+    .premium {
+        &__list {
+            margin-bottom: 0;
+        }
+
+        &__item {
+            &--up {
+                margin-bottom: 20px;
+            }
+        }
+
+        &__info {
+            padding-top: 30px;
+        }
+
+        &__num {
+            font-size: 40px;
+        }
+
+        &__about {
+            font-size: 16px;
+        }
+    }
+
+    .footer {
+        &__list {
+            gap: 25px;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .burger {
+        display: flex;
+        position: absolute;
+    }
+
+    .header {
+        align-items: center;
+        text-align: center;
+
+        &__top {
+            flex-direction: column;
+        }
+
+        &__menu {
+            border-width: 0;
+            position: absolute;
+            background-color: #333;
+            color: #aaa;
+            width: 90%;
+            top: -500%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+            padding: 50px;
+            transition: top 0.3s;
+
+            &--visual {
+                top: 120%;
+            }
+        }
+
+        .burger.active &__menu {
+            top: 175%;
+        }
+
+        &__list {
+            flex-direction: column;
+        }
+
+        &__item {
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+
+        &__title {
+            margin-bottom: 0;
+        }
+
+        &__text {
+            color: #fff;
+        }
+    }
+
+    .direction {
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .offer {
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &__item {
+            &:nth-child(3) {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row: span 2;
+            }
+
+            &:nth-child(6) {
+                min-height: 527px;
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 5;
+                grid-row-end: 7;
+            }
+        }
+    }
+
+    .map {
+        iframe {
+            height: 400px;
+        }
+    }
+
+    .about {
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__content {
+            margin-bottom: 30px;
+        }
+
+        &__title {
+            text-align: center;
+        }
+
+        &__text {
+            max-width: inherit;
+            margin-bottom: 20px;
+        }
+
+        &__video {
+            width: 100%;
+        }
+
+        &__link {
+            min-height: 300px;
+        }
+    }
+
+    .gallery {
+        &__top {
+            flex-direction: column;
+        }
+
+        .slick-prev {
+            left: 0;
+        }
+    }
+    .premium {
+        &__info {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+    }
+
+    .booking {
+        &__form {
+            flex-direction: column;
+        }
+
+        &__input {
+            width: 100%;
+        }
+
+        &__btn {
+            margin-bottom: 30px;
+        }
+    }
+
+    .footer {
+        &__list {
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .country,
+    .offer,
+    .map,
+    .about,
+    .gallery,
+    .premium,
+    .booking {
+        .container {
+            padding: 50px 15px 40px;
+        }
+    }
+
+    .header {
+        &__top {
+            margin-top: 80px;
+        }
+
+        &__contacts--tel {
+            margin-top: 10px;
+        }
+
+        &__menu {
+            &--visual {
+                top: 0;
+            }
+        }
+
+        &__title {
+            font-size: 50px;
+        }
+
+        &__text {
+            width: 300px;
+        }
+    }
+
+    .country {
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .direction {
+        &__title {
+            font-size: 30px;
+        }
+    }
+
+    .offer {
+        &__title {
+            font-size: 30px;
+        }
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+    }
+
+    .map {
+        iframe {
+            height: 300px;
+        }
+    }
+
+    .about {
+        .container {
+            padding: 0 15px 40px;
+        }
+    }
+
+    .gallery {
+        &__top {
+            margin-bottom: 65px;
+        }
+    }
+
+    .premium {
+        &__list {
+            column-count: 1;
+            margin-bottom: 30px;
+        }
+    }
+
+    .booking {
+        &__title {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .header__contacts--tel {
+        margin-left: 0;
+    }
+
+    .country {
+        &__list {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 15px;
+        }
+    }
+
+    .direction {
+        &__list {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            // display: block;
+        }
+    }
+
+    .offer {
+        &__item {
+            &:nth-child(6) {
+                min-height: 256px;
+            }
+        }
+    }
+
+    .booking {
+        &__wrapper {
+            width: 185px;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .country,
+    .offer,
+    .map,
+    .about,
+    .gallery,
+    .premium,
+    .booking {
+        .container {
+            padding: 30px 15px 20px;
+        }
+    }
+
+    .header {
+        &__contacts--tel {
+            margin-left: 0;
+        }
+
+        &__title {
+            font-size: 30px;
+        }
+
+        &__text {
+            font-size: 16px;
+        }
+    }
+
+    .direction__title {
+        font-size: 25px;
+    }
+
+    .offer {
+        &__text--title {
+            font-size: 20px;
+        }
+    }
+
+    .map {
+        &__title {
+            margin-bottom: 15px;
+        }
+    }
+
+    .booking {
+        &__title {
+            font-size: 25px;
+        }
+
+        &__area {
+            margin-bottom: 40px;
+        }
+    }
+}

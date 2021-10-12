@@ -1,5 +1,10 @@
 $(function() {
 
+	$('.burger').on('click', function(){
+		$(this).toggleClass('active');
+		$('.header__menu').toggleClass('header__menu--visual');
+	})
+
     $('.about__link, .country__link').magnificPopup({
 		disableOn: 700,
 		type: 'iframe',
@@ -13,7 +18,6 @@ $(function() {
 	$('.gallery__slider').slick({
 		prevArrow: '<button type="button" class="slick-prev"><img class="gallery__prev" src="../images/main/prev.svg" alt="Назад"></button>',
 		nextArrow: '<button type="button" class="slick-next"><img class="gallery__next" src="../images/main/next.svg" alt="Вперед"></button>'
-		
 	});
 
 });
